@@ -17,10 +17,13 @@ script:
   - docker --version # print the version for logging
   - docker build -t udagram-api-feed ./udagram-api-feed/
   - docker tag udagram-api-feed kelue/udagram-api-feed:latest
+
   - docker build -t udagram-frontend ./udagram-frontend/
   - docker tag udagram-frontend kelue/udagram-frontend:latest
-  - docker build -t reverseproxy ./reverseproxy/
+  
+  - docker build -t reverseproxy ./udagram-reverseproxy/
   - docker tag reverseproxy kelue/reverseproxy:latest
+  
   - docker build -t udagram-api-user ./udagram-api-user/
   - docker tag udagram-api-user kelue/udagram-api-user:latest
 
