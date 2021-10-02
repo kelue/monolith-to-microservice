@@ -1,10 +1,10 @@
 kind: ConfigMap
 apiVersion: v1
 metadata:
-  name: env-config
+  name: mono-config
 data:
   # Configuration values can be set as key-value properties
-  POSTGRES_HOST: udagram2.csixzufepzrt.us-west-2.rds.amazonaws.com
+  POSTGRES_HOST: kelue-mono-db.cnl7egffq1t4.us-east-1.rds.amazonaws.com
   POSTGRES_DB: monodb
   AWS_BUCKET: arn:aws:s3:::kelue-mono-bucket
   AWS_REGION: us-east-1
