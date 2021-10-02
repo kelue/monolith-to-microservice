@@ -20,7 +20,7 @@ script:
   - docker tag udagram-api-feed kelue/udagram-api-feed:v2
   # BUILD FRONTEND IMAGE
   - docker build -t udagram-frontend ./udagram-frontend/
-  - docker tag udagram-frontend kelue/udagram-frontend:v2
+  - docker tag udagram-frontend kelue/udagram-frontend:v3
   # BUILD REVERSE PROXY IMAGE
   - docker build -t reverseproxy ./udagram-reverseproxy/
   - docker tag reverseproxy kelue/reverseproxy:v2
@@ -33,5 +33,5 @@ after_success:
   # PPPPPPPPPPUSH ALL IMAGES TO DOCKER
   - docker push kelue/udagram-api-feed:v2
   - docker push kelue/udagram-api-user:v2
-  - docker push kelue/udagram-frontend:v2
+  - docker push kelue/udagram-frontend:v3
   - docker push kelue/reverseproxy:v2
