@@ -31,7 +31,7 @@ script:
 after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
   # PPPPPPPPPPUSH ALL IMAGES TO DOCKER
-  - docker push kelue/udagram-api-feed:latest
-  - docker push kelue/udagram-api-user:latest
-  - docker push kelue/udagram-frontend:latest
-  - docker push kelue/reverseproxy:latest
+  - docker push kelue/udagram-api-feed:v2
+  - docker push kelue/udagram-api-user:v2
+  - docker push kelue/udagram-frontend:v2
+  - docker push kelue/reverseproxy:v2
